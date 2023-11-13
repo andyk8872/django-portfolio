@@ -8,7 +8,19 @@
         <div class="col-md-6 offset-md-3 my-auto">            
             <div class="text-center my-2">
                 <h1 class="logo-main home-name display-3 p-1 mt-5">AJK Furniture</h1>
-             <a href="" class="text-white btn btn-dark btn-lg p-2 mb-3">Energize your decor</a>
+             <a href="" class="text-white btn btn-dark btn-lg p-2 mb-3">Energize your decor</a><br>
+
+             {% if request.user.is_authenticated %}
+
+             <h1>Hi {{ request.user.username }}!</h1>
+     
+             <a href="{% url 'account_logout' %}">Logout</a>
+     
+         {% else %}
+               
+     
+             <a class="btn" href="{% url 'account_login' %}">Login</a>
+         {% endif %}
             
             </div>        
         </div>
