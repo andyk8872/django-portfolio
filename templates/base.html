@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
     </head>
-    <body>
+    <body class="">
         <div class="container">
            <nav class="navbar fixed-top navbar-expand-lg navbar-color navbar-dark container">
 
@@ -33,32 +33,32 @@
                 {% comment %} <a href="#" class="navbar-brand">
                     <img src="" alt="" width="50" height="40">
                 </a> {% endcomment %}
-                <li class="nav-hero">
-                <a href="#" id="hom" class="nav-link nav-name text-white">Andrew</a>
+                <li class="nav-hero nav-item">
+                <a href="#" id="" class="nav-link nav-name text-white">Andrew</a>
                 </li>
     
-                <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="collapse navbar-collapse goto" id="navbarToggler">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-white"></a>
+                        <li class="nav-item goto">
+                            <a href="#" id="" class="nav-link text-white"></a>
                         </li>                     
                     </ul>
     
                     <ul class="navbar-nav me-0 mb-2 mb-lg-0"> 
                         <li class="nav-item me-5 active">
-                            <a href="#" id="home" class="nav-link active text-white">Home</a>
+                            <a href="#" id="home" class="nav-link text-white">Home</a>
                         </li>                   
                         <li class="nav-item me-5">
-                            <a href="#" id="about" class="nav-link text-white">About</a>
+                            <a href="#about" id="" class="nav-link text-white">About</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a href="#resume" id="resume" class="nav-link text-white">Resume</a>
+                            <a href="#resume" id="" class="nav-link text-white">Resume</a>
                         </li>
                         <li class="nav-item me-5">
-                            <a href="#project" id="projects" class="nav-link text-white">Projects</a>
+                            <a href="#project" id="" class="nav-link text-white">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#contact" id="contact" class="nav-link text-white">Contact</a>
+                            <a href="#contact" id="" class="nav-link text-white">Contact</a>
                         </li>
                         {% comment %} <li class="nav-item">                            
                             {% if request.user.is_authenticated %}                  

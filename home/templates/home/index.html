@@ -3,26 +3,62 @@
 	<div class="row h-100">
 		<div class="col-md-6 offset-md-3 my-auto">
 			<div class="text-center my-2">
-				<h1 class="logo-main home-name display-3 p-1 mt-5">Andrew's Portfolio</h1>
-				<a href="" class="text-white btn btn-dark btn-lg p-2 mb-3"
-					>Software Developer</a
-				><br />
+				<h1 class="display-3">Andrew's Portfolio</h1>				
 			</div>
 		</div>
 	</div>
 </div>
+<div class="container-fluid vh-100 padding-top">
+	<div class="row h-100">
+		<div class="col-md-6 offset-md-3 my-auto">
+	       <h1 id="about" class="text-center text-white padding-top">About</h1>	      
+        </div>
+    </div>
+</div>
+<div class="container-fluid vh-100 pad">
+	<div class="row h-100">
+		<div class="col-md-6 offset-md-3 my-auto">
+	       <h1 id="resume" class="text-center text-white padding-top">Resume</h1>	      
+        </div>
+    </div>
+</div>
 <div class="container-fluid vh-100">
 	<div class="row h-100">
 		<div class="col-md-6 offset-md-3 my-auto">
-	       <h1 id="project" class="pt-3 text-center">Projects</h1>	      
+	       <h1 id="project" class="pt-3 text-center text-white padding-top">Projects</h1>	      
+        </div>
+		{% comment %} -------------------------------- {% endcomment %}
+		<div class="album py-5">
+			<div class="container">
+		
+			  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> 
+				{% for item in jobs.all %}
+				<div class="col">
+					<p class="card-text">{{ item.title }}</p>
+				  <div class="card shadow-sm">
+					<img class="card-img-top" src="{{ item.image.url }}" height="300">
+					<div class="card-body">
+						<p class="card-text">{{ item.tech }}</p>
+												  
+					</div>
+				  </div>
+				
+				</div>
+				{% endfor %}
+			  </div>
+		
+			</div>
+		  </div>
+		{% comment %} ---------------------------------- {% endcomment %}
+    </div>
+</div>
+<div class="container-fluid vh-100">
+	<div class="row h-100">
+		<div class="col-md-6 offset-md-3 my-auto">
+	       <h1 id="contact" class="pt-3 text-center text-white padding-top">Contact</h1>	      
         </div>
     </div>
 </div>
 
 
-<div id="contact" class="container-fluid vh-100 bg-success">
-	<div class="pt-5">
-	<h1 class="pt-5 text-center">Contact</h1>
-</div>
-</div>
 {% endblock %}

@@ -42,7 +42,12 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: black; }
+    background-color: black;    
+}
+
+.padding-top {
+    padding-top: 100px !important;
+}
 
 .navbar-color {
     background-color: black;
