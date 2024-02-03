@@ -96,13 +96,24 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'ehbejhfo', 
+#         'USER': 'ehbejhfo',
+#         'PASSWORD': 'EuL_XX-ZACXxekU2jcT1uQvrKGhrI-oM',
+#         'HOST': 'flora.db.elephantsql.com', 
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ehbejhfo', 
-        'USER': 'ehbejhfo',
-        'PASSWORD': 'EuL_XX-ZACXxekU2jcT1uQvrKGhrI-oM',
-        'HOST': 'flora.db.elephantsql.com', 
+        'NAME': 'portfolio', 
+        'USER': 'andrew',
+        'PASSWORD': 'W1llliam',
+        'HOST': 'database-1.cpwa0cyui26w.eu-west-1.rds.amazonaws.com', 
         'PORT': '5432',
     }
 }
