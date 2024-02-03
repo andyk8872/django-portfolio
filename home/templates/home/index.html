@@ -32,8 +32,8 @@
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
                     {% for item in jobs.all %}
-                    <div class="col">
-                        <p class="card-text">{{ item.title }}</p>
+                    <div class="col border border-danger">
+                        <p class="card-text text-white">{{ item.title }}</p>
                         <div class="card shadow-sm""ratio ratio-16x9">
                             <img class="card-img-top" "img-fluid" src="{{ item.image.url }}" height="200" width="200"/>
                             <div class="card-body">
