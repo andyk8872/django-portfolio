@@ -1,4 +1,6 @@
 {% extends "base.html" %} {% load static %} {% block content %}
+
+
 <div class="container-fluid vh-100">
     <div class="row h-100">
         <div class="col-md-6 offset-md-3 my-auto">
@@ -8,7 +10,7 @@
         </div>
     </div>
 </div>
-<div class="container-fluid vh-100 padding-top">
+<div class="container-fluid vh-100">
     <div class="row h-100">
         <div class="col-md-6 offset-md-3 my-auto">
             <h1 id="about" class="text-center text-white padding-top">About</h1>
@@ -32,9 +34,9 @@
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
                     {% for item in jobs.all %}
-                    <div class="col border border-danger">
+                    <div class="col">
                         <p class="card-text text-white">{{ item.title }}</p>
-                        <div class="card shadow-sm""ratio ratio-16x9">
+                        <div class="card shadow-sm" "ratio ratio-16x9">
                             <img class="card-img-top" "img-fluid" src="{{ item.image.url }}" height="200" width="200"/>
                             <div class="card-body">
                                 <p class="card-text">{{ item.tech }}</p>
@@ -43,7 +45,7 @@
                                     <a class="btn btn-primary" role="button" href="{{ item.live_url }}" target="_blank"
                                         >Live Site</a
                                     >
-                                    <a
+                                     <a
                                         class="btn btn-primary"
                                         role="button"
                                         href="{{ item.github_url }}"
@@ -58,15 +60,42 @@
                 </div>
             </div>
         </div>
+		<!-- end of 1st card. -->
+		<div class="album py-5">
+		   <div class="container">
+			<div class="row justify-content-end">
+				{% for item in jobs.all %}
+			    <div class="col-md-4 mb-4 justify-content-center">
+				   <div class="card">
+			         <img src="{{ item.image.url }}" height="200" class="card-img-top" alt="...">
+			        <div class="card-body">
+			         <h5 class="card-title">{{ item.title }}</h5>
+				      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+			         <p class="card-text">{{ item.tech }}</p>
+				     <a href="{{ item.live_url }}" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
+			         <a href="{{ item.github_url }}" class="btn "><i class="fab fa-github"></i> Github</a>
+			        </div>
+			       </div>
+		        </div> 
+				{% endfor %}
+			</div>
+		</div>
+		</div> 
+
+		
+		
     </div>
 </div>
+
 
 <div class="container-fluid vh-100">
     <div class="row h-100">
         <div class="col-md-6 offset-md-3 my-auto">
             <h1 id="contact" class="pt-3 text-center text-white padding-top">Contact</h1>
-        </div>
+        </div>	
     </div>
 </div>
+
+
 
 {% endblock %}

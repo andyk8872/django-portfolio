@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
     </head>
-    <body class="">
+    <body class="d-flex flex-column min-vh-100">
         <div class="container">
            <nav class="navbar fixed-top navbar-expand-lg navbar-color navbar-dark container">
 
@@ -82,7 +82,7 @@
 		{% block content %}
          {% endblock content %}
 
-        <footer>
+         <footer class="text-center fixed-bottom">
             <nav class="navbar navbar-light bg-light">
              <div class="container-fluid">
                  <a href="#" class="navbar-brand">Fixed Bottom</a>
