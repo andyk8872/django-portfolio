@@ -89,7 +89,7 @@ li {
 
 /* --------------------------------- */
 :root {
-    --gradient: linear-gradient(to left top, #DD2476 10%, #FF512F 90%) !important;
+    --gradient: linear-gradient(to left top, var(--yellow)10%, #FF512F 90%) !important;
   }
   
   /* body {
@@ -98,7 +98,7 @@ li {
   
   .card {
     background: #222;
-    border: 1px solid #dd2476;
+    border: 1px solid var(--yellow);
     color: rgba(250, 250, 250, 0.8);
     margin-bottom: 2rem;
   }
